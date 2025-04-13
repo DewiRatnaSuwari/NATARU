@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,11 +61,11 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Panduan Mudik', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Info Tarif Tol', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Rest Area', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Kalender Event Semarang', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'Biro Perjalanan Wisata', 'image' => 'Biro.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'Rental Mobil', 'image' => 'rental.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'Kedatangan & Keberangkatan Pesawat', 'image' => 'Pesawat.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'Kedatangan & Keberangkatan Kapal Penumpang', 'image' => 'Kapal.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'Kedatangan & Keberangkatan Kereta Api', 'image' => 'Kereta.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
             ];
         @endphp
 
@@ -84,11 +84,11 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
+        'Biro Perjalanan Wisata' => 'https://infomudik.semarangkota.go.id/halaman/daftar/26',
+        'Rental Mobil' => 'https://infomudik.semarangkota.go.id/halaman/daftar/27',
+        'Kedatangan & Keberangkatan Pesawat' => 'https://www.skyscanner.co.id/penerbangan/kedatangan-keberangkatan/srg/semarang-kedatangan-keberangkatan',
+        'Kedatangan & Keberangkatan Kapal Penumpang' => 'https://www.pelni.co.id/reservasi-tiket',
+        'Kedatangan & Keberangkatan Kereta Api' => 'https://www.kai.id/',
     };
 @endphp
 

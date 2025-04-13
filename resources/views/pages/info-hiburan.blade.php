@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,12 +61,12 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Panduan Mudik', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Info Tarif Tol', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Rest Area', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Kalender Event Semarang', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
-                ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'karaoke', 'image' => 'karoke.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'SPA', 'image' => 'spa.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'Rumah Pijat', 'image' => 'pijatt.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'Billiard', 'image' => 'biliard.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'Permainan Ketangkasan', 'image' => 'permainan.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'Bioskop', 'image' => 'bioskop.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
             ];
         @endphp
 
@@ -85,12 +85,12 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
+        'karaoke' => 'https://infomudik.semarangkota.go.id/halaman/daftar/15',
+        'SPA' => 'https://infomudik.semarangkota.go.id/halaman/daftar/16',
+        'Rumah Pijat' => 'https://infomudik.semarangkota.go.id/halaman/daftar/17',
+        'Billiard' => 'https://infomudik.semarangkota.go.id/halaman/daftar/18',
+        'Permainan Ketangkasan' => 'https://infomudik.semarangkota.go.id/halaman/daftar/19',
+        'Bioskop' => 'https://infomudik.semarangkota.go.id/halaman/daftar/20',
     };
 @endphp
 

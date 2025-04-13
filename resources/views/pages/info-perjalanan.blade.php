@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,16 +61,16 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Pantau Lalin Kota Semarang', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Pantau Lalin Tol Semarang A/B/C', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Pantau Lalin Tol Semarang-Batang', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Demak', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Solo', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
-                ['title' => 'CCTV Non Tol Bawen-ungaran', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Non Tol Semarang-Kendal', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Pantauan Mudik Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Terminal Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Lalin Jabar', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'Telepon Penting(Call Center)', 'image' => 'Telpon.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'Bengkel Mobil/Motor', 'image' => 'Bengkel.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'Mobil Derek (Towing)', 'image' => 'derek.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'SPBU', 'image' => 'spbu.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'SPKLU', 'image' => 'spklu.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'Fasilitas Kesehatan', 'image' => 'Kesehatan.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'Kantor Polisi', 'image' => 'Polisi.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
+                ['title' => 'ATM', 'image' => 'atm.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Posko Penanggulangan Bencana', 'image' => 'bencana.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Masjid', 'image' => 'Masjid.png', 'color' => 'text-success', 'btn' => 'btn-info'],
             ];
         @endphp
 
@@ -89,16 +89,16 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
-        'Mudik Sehat' => 'https://ayosehat.kemkes.go.id/kampanye-prioritas/mudik-sehat',
-        'Info Mudik Tik Tok' => 'https://www.tiktok.com/tag/infomudik',
-        'Mudik Lebaran Menyenangkan' => 'https://drive.google.com/file/d/1k1ZqSUrvpr7k-n2FCIgUFjs3WJXevzZX/view',
-        'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa' => 'https://drive.google.com/file/d/1348AUn-noSLkkk4q_CKTGPWGVal9LPKO/view',
-        'Masjid' => '',
+        'Telepon Penting(Call Center)' => 'https://infomudik.semarangkota.go.id/halaman/telepon/',
+        'Bengkel Mobil/Motor' => 'https://infomudik.semarangkota.go.id/halaman/daftar/9',
+        'Mobil Derek (Towing)' => 'https://infomudik.semarangkota.go.id/halaman/daftar/10',
+        'SPBU' => 'https://www.google.com/maps/search/spbu+kota+semarang/',
+        'SPKLU' => 'https://infomudik.semarangkota.go.id/halaman/daftar/23',
+        'Fasilitas Kesehatan' => 'https://infomudik.semarangkota.go.id/halaman/detail/48',
+        'Kantor Polisi' => 'https://infomudik.semarangkota.go.id/halaman/daftar/12',
+        'ATM' => 'https://www.google.com/maps/search/atm+kota+semarang/',
+        'Posko Penanggulangan Bencana' => 'https://infomudik.semarangkota.go.id/halaman/daftar/11',
+        'Masjid' => 'https://www.google.com/maps/search/masjid+kota+semarang/',
         default => '#',
     };
 @endphp

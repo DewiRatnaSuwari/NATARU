@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,22 +61,22 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Pantau Lalin Kota Semarang', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Pantau Lalin Tol Semarang A/B/C', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Pantau Lalin Tol Semarang-Batang', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Demak', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Solo', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
-                ['title' => 'CCTV Non Tol Bawen-ungaran', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Non Tol Semarang-Kendal', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Pantauan Mudik Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Terminal Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Lalin Jabar', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
-                ['title' => 'Live CCTV Lalu Lintas Jawa Timur', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'Live CCTV Pelabuhan Tanjung Periuk Pelindo', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Lalu Lintas Jasa Marga', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Kemenhub', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Lalu Lintas Jasa Marga', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Kemenhub', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'objek wisata', 'image' => 'objek-wisata.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'hotel', 'image' => 'hotel.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'restoran', 'image' => 'restoran.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'kuliner', 'image' => 'kuliner.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'tempat nongkrong', 'image' => 'tempat-nongkrong.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'oleh oleh', 'image' => 'oleh-oleh.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'kota lama', 'image' => 'kota-lama.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
+                ['title' => 'pramuwisata', 'image' => 'pramuwisata.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'karaoke', 'image' => 'karaoke.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'spa', 'image' => 'spa.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'rumah pijat', 'image' => 'rumah-pijat.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
+                ['title' => 'billiard', 'image' => 'billiard.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'permainan ketangkasan', 'image' => 'permainan-ketangkasan.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'bioskop', 'image' => 'bioskop.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'bar', 'image' => 'bar.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'hiburan malam', 'image' => 'hiburan-malam.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
             ];
         @endphp
 
@@ -95,17 +95,22 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
-        'Mudik Sehat' => 'https://ayosehat.kemkes.go.id/kampanye-prioritas/mudik-sehat',
-        'Info Mudik Tik Tok' => 'https://www.tiktok.com/tag/infomudik',
-        'Mudik Lebaran Menyenangkan' => 'https://drive.google.com/file/d/1k1ZqSUrvpr7k-n2FCIgUFjs3WJXevzZX/view',
-        'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa' => 'https://drive.google.com/file/d/1348AUn-noSLkkk4q_CKTGPWGVal9LPKO/view',
-        'Mudik Lebaran Menyenangkan' => 'https://drive.google.com/file/d/1k1ZqSUrvpr7k-n2FCIgUFjs3WJXevzZX/view',
-        'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa' => 'https://drive.google.com/file/d/1348AUn-noSLkkk4q_CKTGPWGVal9LPKO/view',
+        'objek wisata' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/3',
+        'hotel' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/1',
+        'restoran' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/2',
+        'kuliner' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/4',
+        'tempat nongkrong' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/5',
+        'oleh oleh' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/6',
+        'kota lama' => 'https://kotalama.semarangkota.go.id/',
+        'pramuwisata' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/8',
+        'karaoke' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/15',
+        'spa' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/16',
+        'rumah pijat' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/17',
+        'billiard' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/18',
+        'permainan ketangkasan' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/19',
+        'bioskop' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/20',
+        'bar' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/21',
+        'hiburan malam' => 'https://www.infomudik.semarangkota.go.id/halaman/daftar/25',
         default => '#',
     };
 @endphp

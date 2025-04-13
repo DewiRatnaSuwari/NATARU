@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+    <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -68,8 +68,8 @@
                 ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
                 ['title' => 'Mudik Sehat', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
                 ['title' => 'Info Mudik Tik Tok', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'Mudik Lebaran Menyenangkan', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Mudik Lebaran Menyenangkan', 'image' => 'lapor-semar.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa', 'image' => 'lapor-semar.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
             ];
         @endphp
 

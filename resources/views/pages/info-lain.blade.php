@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,13 +61,12 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Panduan Mudik', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Info Tarif Tol', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Rest Area', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Kalender Event Semarang', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
-                ['title' => 'Kalender Event Semarang', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Mudik Minim Sampah', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'perkiraan cuaca bmkg', 'image' => 'perkiraan-cuaca-BMKG.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'lokasi penukaran rupiah bank indonesia', 'image' => 'lokasi-penukaran-rupiah-bank-indonesia.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'live siaran tvri', 'image' => 'live-siaran-TVRI.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'kemkomdigi tv', 'image' => 'kemkomdigi-TV.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'info publik', 'image' => 'info-publik.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'regulasi', 'image' => 'regulasi.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
             ];
         @endphp
 
@@ -86,13 +85,12 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
+        'perkiraan cuaca bmkg' => 'https://www.bmkg.go.id/cuaca/prakiraan-cuaca/33.74',
+        'lokasi penukaran rupiah bank indonesia' => 'https://pintar.bi.go.id/Order/KasKeliling',
+        'live siaran tvri' => 'https://klik.tvri.go.id/detailchannel/TVRI_CH_00',
+        'kemkomdigi tv' => 'https://www.youtube.com/channel/UC6673kwtPekbPTJgRsTSizQ',
+        'info publik' => 'https://infopublik.id/kategori/infomudik',
+        'regulasi' => 'https://infomudik.semarangkota.go.id/web/infolain/19',
     };
 @endphp
 

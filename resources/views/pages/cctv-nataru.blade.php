@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,20 +61,20 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Pantau Lalin Kota Semarang', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Pantau Lalin Tol Semarang A/B/C', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
-                ['title' => 'Pantau Lalin Tol Semarang-Batang', 'image' => 'restarea.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Demak', 'image' => 'kalender.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
-                ['title' => 'Pantau Lalin Tol Semarang-Solo', 'image' => 'sampah.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
-                ['title' => 'CCTV Non Tol Bawen-ungaran', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Non Tol Semarang-Kendal', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'CCTV Pantauan Mudik Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Terminal Jateng', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'CCTV Lalin Jabar', 'image' => 'sehat.png', 'color' => 'text-success', 'btn' => 'btn-info'],
-                ['title' => 'Live CCTV Lalu Lintas Jawa Timur', 'image' => 'tiktok.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
-                ['title' => 'Live CCTV Pelabuhan Tanjung Periuk Pelindo', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Lalu Lintas Jasa Marga', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
-                ['title' => 'Live CCTV Kemenhub', 'image' => '', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Pantau Lalin Kota Semarang', 'image' => 'pantau-lalin-kota-semarang.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'Pantau Lalin Tol Semarang A/B/C', 'image' => 'pantau-lalin-tol-semarang.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'Pantau Lalin Tol Semarang-Batang', 'image' => 'pantau-lalin-tol-semarang-batang.png', 'color' => 'text-danger', 'btn' => 'btn-warning'],
+                ['title' => 'Pantau Lalin Tol Semarang-Demak', 'image' => 'pantau-lalin-tol-semarang-demak.png', 'color' => 'text-dark', 'btn' => 'btn-warning'],
+                ['title' => 'Pantau Lalin Tol Semarang-Solo', 'image' => 'pantau-lalin-tol semarang-solo.png', 'color' => 'text-warning', 'btn' => 'btn-warning'],
+                ['title' => 'CCTV Non Tol Bawen-ungaran', 'image' => 'CCTV-nontol-bawen-ungaran.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'CCTV Non Tol Semarang-Kendal', 'image' => 'CCTV-nontol-kendal-semarang.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
+                ['title' => 'CCTV Pantauan Mudik Jateng', 'image' => 'CCTV-pantaumudikjateng.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'CCTV Terminal Jateng', 'image' => 'CCTV-terminaljateng.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'CCTV Lalin Jabar', 'image' => 'CCTV-lalinjabar.png', 'color' => 'text-success', 'btn' => 'btn-info'],
+                ['title' => 'Live CCTV Lalu Lintas Jawa Timur', 'image' => 'CCTV-lalinjatim.png', 'color' => 'text-primary', 'btn' => 'btn-info'],
+                ['title' => 'Live CCTV Pelabuhan Tanjung Periuk Pelindo', 'image' => 'CCTV-pelabuhantanjungpriukpelindo.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Live CCTV Lalu Lintas Jasa Marga', 'image' => 'CCTV-lalulintasjasamarga.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
+                ['title' => 'Live CCTV Kemenhub', 'image' => 'CCTV-kemenhub.png', 'color' => 'text-info', 'btn' => 'btn-primary'],
             ];
         @endphp
 
@@ -93,15 +93,20 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
-        'Rest Area' => 'https://www.jmtransjawatol.co.id/id/layanan/rest-area',
-        'Kalender Event Semarang' => 'https://ppid.semarangkota.go.id/event-kota-semarang/',
-        'Mudik Minim Sampah' => 'https://drive.google.com/drive/folders/1pemQeKZndsnRprNQBuDDRbLDFH_heVAR',
-        'Mudik Sehat' => 'https://ayosehat.kemkes.go.id/kampanye-prioritas/mudik-sehat',
-        'Info Mudik Tik Tok' => 'https://www.tiktok.com/tag/infomudik',
-        'Mudik Lebaran Menyenangkan' => 'https://drive.google.com/file/d/1k1ZqSUrvpr7k-n2FCIgUFjs3WJXevzZX/view',
-        'Yuk Mampir Peta Kuliner Pullau Sumatra Jawa' => 'https://drive.google.com/file/d/1348AUn-noSLkkk4q_CKTGPWGVal9LPKO/view',
+        'Pantau Lalin Kota Semarang' => 'https://pantausemar.semarangkota.go.id/?cctv_category_id=fc3ed271-787c-4191-a7dd-fc84314a9f71',
+        'Pantau Lalin Tol Semarang A/B/C' => 'https://mudik.pu.go.id/cctv-tol#cctv',
+        'Pantau Lalin Tol Semarang-Batang' => 'https://mudik.pu.go.id/cctv-tol#cctv',
+        'Pantau Lalin Tol Semarang-Demak' => 'https://mudik.pu.go.id/cctv-tol#cctv',
+        'Pantau Lalin Tol Semarang-Solo' => 'https://mudik.pu.go.id/cctv-tol#cctv',
+        'CCTV Non Tol Bawen-ungaran' => 'https://apace-ai.com/APC24090/',
+        'CCTV Non Tol Semarang-Kendal' => 'https://apace-ai.com/APC2401412/',
+        'CCTV Pantauan Mudik Jateng' => 'https://perhubungan.jatengprov.go.id/cctv-pantauan-mudik',
+        'CCTV Terminal Jateng' => 'https://www.perhubungan.jatengprov.go.id/cctv',
+        'CCTV Lalin Jabar' => 'https://pelindung.bandung.go.id/',
+        'Live CCTV Lalu Lintas Jawa Timur' => 'https://play.google.com/store/apps/details?id=com.edishub.sitsdishubsurabaya',
+        'Live CCTV Pelabuhan Tanjung Periuk Pelindo' => 'http://cctv.priokport.co.id/public',
+        'Live CCTV Lalu Lintas Jasa Marga' => 'https://play.google.com/store/apps/details?id=com.jm.travoy',
+        'Live CCTV Kemenhub' => 'https://mudik.kemenhub.go.id/cctv',
         default => '#',
     };
 @endphp

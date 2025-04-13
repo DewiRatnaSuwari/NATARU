@@ -44,11 +44,11 @@
 <div class="nav-bar d-flex justify-content-between">
     <div><strong>LOGO NANTI</strong></div>
     <div>
-        <a href="#" class="text-white mx-2 text-decoration-none">Home</a>
+        <a href="{{ url('/NATARU') }}" class="text-white mx-2 text-decoration-none">Home</a>
         <a href="#" class="text-white mx-2 text-decoration-none">About us</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
+        <a href="/panduan-mudik" class="text-white mx-2 text-decoration-none">Panduan mudik</a>
         <a href="#" class="text-white mx-2 text-decoration-none">Aktivitas</a>
-        <a href="#" class="text-white mx-2 text-decoration-none">Kontak</a>
+        <a href="info-kontak" class="text-white mx-2 text-decoration-none">Kontak</a>
     </div>
 </div>
 <!-- resources/views/info-nataru.blade.php -->
@@ -61,8 +61,8 @@
     <div class="row justify-content-center g-4">
         @php
             $menus = [
-                ['title' => 'Panduan Mudik', 'image' => 'panduan.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
-                ['title' => 'Info Tarif Tol', 'image' => 'tariftol.png', 'color' => 'text-info', 'btn' => 'btn-info'],
+                ['title' => 'Tempat Nongkrong', 'image' => 'NONGKRONG.png', 'color' => 'text-danger', 'btn' => 'btn-primary'],
+                ['title' => 'Kuliner', 'image' => 'Kuliner.png', 'color' => 'text-info', 'btn' => 'btn-info'],
             ];
         @endphp
 
@@ -81,8 +81,8 @@
                 </div>
                 @php
     $link = match($menu['title']) {
-        'Panduan Mudik' => 'https://drive.google.com/file/d/1qDK1UoB5go49g2kKN9jG6BePP3PpEbaR/view',
-        'Info Tarif Tol' => 'https://mudik.pu.go.id/tarif_tol',
+        'Tempat Nongkrong' => 'https://infomudik.semarangkota.go.id/halaman/daftar/5',
+        'Kuliner' => 'https://infomudik.semarangkota.go.id/halaman/daftar/4',
     };
 @endphp
 
